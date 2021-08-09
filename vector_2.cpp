@@ -12,16 +12,11 @@ int main(){
 	for(int i=1;i<=n;i++){
 		v.push_back(i);
 	}
-
-//	for(int i=0;i<n;i++)
-//		printf("%d ",v[i]);	
 	printf("<");
-	while(v.size()){
+	while(v.size()-1){
 		pos=(pos+k-1) % v.size();
-		printf("%d",v[pos]);
+		printf("%d, ",v[pos]);
 		v.erase(v.begin()+pos);
-		if(v.size())
-			printf(", ");
-		else printf(">");
-	}	
+	}
+	printf("%d>",v.front());	
 } 
